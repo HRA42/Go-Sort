@@ -34,8 +34,9 @@ The benchmark file `./main_test.go` does the same, but run with the input cases:
 
 ## Codesandbox
 
-You can run this Repo in Codesandbox!
-
+You can run this Repo in Codesandbox!  
+  
+[![Edit in CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)]()
 ---
 
 ## Commands to run  
@@ -49,5 +50,5 @@ go run main.go
 ### run benchmark
 
 ```bash
-go test -benchmem -run=^$ -bench ^Benchmark_createArray$ github.com/hra42/go-sort
+go test -benchmem -run=^$ -bench ^Benchmark_createArray$
 ```
