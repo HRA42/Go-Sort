@@ -70,6 +70,7 @@ func main() {
 	duration_goSort := time.Since(start_goSort)
 	fmt.Println("GoSort: " + fmt.Sprint(duration_goSort))
 
+	// slice sort
 	slice_arr := copy_arr(arr)
 	start_sliceSort := time.Now()
 	slices.Sort(slice_arr)
