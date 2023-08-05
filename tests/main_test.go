@@ -1,13 +1,13 @@
-package main
+package tests
 
 import (
 	"fmt"
-	"github.com/hra42/go-sort/bubblesort"
-	"github.com/hra42/go-sort/insertionsort"
-	"github.com/hra42/go-sort/mergesort"
-	"github.com/hra42/go-sort/quicksort"
-	"github.com/hra42/go-sort/randomarray"
-	"github.com/hra42/go-sort/shellsort"
+	"github.com/hra42/go-sort/internal/bubblesort"
+	"github.com/hra42/go-sort/internal/insertionsort"
+	"github.com/hra42/go-sort/internal/mergesort"
+	"github.com/hra42/go-sort/internal/quicksort"
+	"github.com/hra42/go-sort/internal/randomarray"
+	"github.com/hra42/go-sort/internal/shellsort"
 	"golang.org/x/exp/slices"
 	"math"
 	"sort"
