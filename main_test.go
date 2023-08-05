@@ -175,7 +175,7 @@ func TestCreateRandomIntArray(t *testing.T) {
 func TestInsertionSort(t *testing.T) {
 	for _, test := range tests {
 		result := insertionsort.Sort(test.input)
-		for i, _ := range result {
+		for i := range result {
 			if result[i] != test.expected[i] {
 				t.Errorf("Test fehlgeschlagen! Erwartet: %v, Erhalten: %v", test.expected, result)
 			}
@@ -186,7 +186,7 @@ func TestInsertionSort(t *testing.T) {
 func TestBubbleSort(t *testing.T) {
 	for _, test := range tests {
 		result := bubblesort.Sort(test.input)
-		for i, _ := range result {
+		for i := range result {
 			if result[i] != test.expected[i] {
 				t.Errorf("Test fehlgeschlagen! Erwartet: %v, Erhalten: %v", test.expected, result)
 			}
@@ -197,7 +197,7 @@ func TestBubbleSort(t *testing.T) {
 func TestShellSort(t *testing.T) {
 	for _, test := range tests {
 		result := shellsort.Sort(test.input)
-		for i, _ := range result {
+		for i := range result {
 			if result[i] != test.expected[i] {
 				t.Errorf("Test fehlgeschlagen! Erwartet: %v, Erhalten: %v", test.expected, result)
 			}
@@ -208,7 +208,7 @@ func TestShellSort(t *testing.T) {
 func TestQuickSort(t *testing.T) {
 	for _, test := range tests {
 		result := quicksort.Sort(test.input)
-		for i, _ := range result {
+		for i := range result {
 			if result[i] != test.expected[i] {
 				t.Errorf("Test fehlgeschlagen! Erwartet: %v, Erhalten: %v", test.expected, result)
 			}
@@ -219,7 +219,7 @@ func TestQuickSort(t *testing.T) {
 func TestMergeSort(t *testing.T) {
 	for _, test := range tests {
 		result := mergesort.Sort(test.input)
-		for i, _ := range result {
+		for i := range result {
 			if result[i] != test.expected[i] {
 				t.Errorf("Test fehlgeschlagen! Erwartet: %v, Erhalten: %v", test.expected, result)
 			}
