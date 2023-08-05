@@ -24,7 +24,7 @@ func copy_arr(arr []int) []int {
 func main() {
 	// create Array
 	start_creation := time.Now()
-	arr := randomarray.Create_random_int_array(100000, math.MaxInt)
+	arr := randomarray.CreateRandomIntArray(100000, math.MaxInt)
 	duration_creation := time.Since(start_creation)
 	fmt.Println("Creation: " + fmt.Sprint(duration_creation))
 
