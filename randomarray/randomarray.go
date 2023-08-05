@@ -2,15 +2,16 @@ package randomarray
 
 import (
 	"math/rand"
-	"unsafe"
+	"time"
 )
 
-func Create_random_int_array(length int, max int) (res []int) {
-	res = make([]int, length)
-	bts := unsafe.Slice((*byte)(unsafe.Pointer(unsafe.SliceData(res))), len(res)*int(unsafe.Sizeof(int(0))))
-	rand.Read(bts)
-	for i, v := range res {
-		res[i] = v % max
+func CreateRandomIntArray(length int, max int) []int {
+	r := rand.New(rand.NewSource(time.Now().UnixNano())) // create local pseudorandom number generator
+	res := make([]int, length)
+
+	for i := range res {
+		res[i] = r.Intn(max) // uses local prng
 	}
-	return
+
+	return res
 }
