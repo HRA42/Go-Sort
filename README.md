@@ -65,11 +65,17 @@ You can run this Repo in Codesandbox!
 ### run main.go
 
 ```bash
-go run main.go
+go run cmd/go-sort/main.go
+```
+
+### run unit test
+
+```bash
+go test -v tests/main_test.go
 ```
 
 ### run benchmark
 
 ```bash
-go test -benchmem -run=^$ -bench ^Benchmark_createArray$
+go test -bench=. tests/main_test.go
 ```
