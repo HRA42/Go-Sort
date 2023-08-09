@@ -156,17 +156,17 @@ func Benchmark_sliceSort(b *testing.B) {
 }
 
 func TestCreateRandomIntArray(t *testing.T) {
-	max := math.MaxInt
+	maxConst := math.MaxInt
 
 	for _, v := range testcases {
-		res := randomarray.CreateRandomIntArray(v.input, max)
+		res := randomarray.CreateRandomIntArray(v.input, maxConst)
 		if len(res) != v.input {
 			t.Errorf("Expected length of %v, but got %v", v.input, len(res))
 		}
 
 		for _, v := range res {
-			if v < 0 || v >= max {
-				t.Errorf("Value %v should be within [0, %v)", v, max)
+			if v < 0 || v >= maxConst {
+				t.Errorf("Value %v should be within [0, %v)", v, maxConst)
 			}
 		}
 	}
